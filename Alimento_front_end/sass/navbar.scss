@@ -1,0 +1,278 @@
+// Estilos del paso 12
+
+@import 'variables';//Importa los colores.
+@import 'fuentesletters';//Importa las fuentes para los textos.
+
+
+// Estilos de contendor final
+.container-final{
+ 
+ margin-bottom: 35px;//Da un espacio considerable del otro container
+
+    // Estilo a la imagen alimento c.r
+    img{
+     position: absolute;
+     height: 40%;
+     width: 43%;
+     top: 50%;
+     left:38%;
+     cursor: pointer;
+    }
+// Esto da estilo al navbar
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:white;
+    margin-right: 10%;
+    margin-top: 4%;
+  }
+//   Esto da estilo a lo que esta dentro del navbar
+  li {
+    display: inline;
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    text-decoration: none;
+    align-self: flex-end;
+    a{
+        color: $color3;
+        font-family: $font3;
+    }
+    a:hover{
+        background-color: $color5;
+      }
+  }
+
+//   Este da estilo y pocisión a la imagen de la macosta happy
+  .pet{
+      
+    img{
+        position: relative;
+        height: 25%;
+        width: 15%;
+        top: 20%;
+        left:45%;
+        cursor: pointer;
+       }
+    }
+ 
+    // Este da estilo al titulo de Ahora voy y mascota
+    .text-pet{
+        position: relative;
+        top: 8%;
+        left: 32%;
+
+        h1{
+            font-family: $font3;
+            color: $color1;
+            font-size: xx-large;
+        }
+           }
+
+
+}
+// Fin de los estilos del contedor final
+
+// Estilos del contendor card
+.container-card{
+    // Este da estilo al contenedor
+    position: absolute;
+    border: $color10 2px solid;
+    height: 45%;
+    width: 70%;
+    margin-left: 20%;
+    
+
+    // Este da estilo al titulo orde de
+    .tituorden{
+        top: 60%;
+        position: relative;
+        left: 40%;
+
+        h2{
+            font-family: $font3;
+            font-size: large;
+            font-weight: 600;
+        }
+        
+    }
+
+        //ESTILO DE LA CLASE DEL PROD1
+           div.prod {
+            position: relative;
+            top: 30%;
+            width: 70%;
+            padding: 30px;
+            margin-left: 5%;
+           
+            
+
+        //posicionamiento de la imagen del producto 1
+        // alto y ancho
+           img{
+            position: absolute;
+            right: 53%;
+            width: 130px;
+            height: 150px;
+        }
+        }
+
+        //ESTILO DE DE LA CLASE PRO2
+        div.prod1 {
+            position: relative;
+            top: 30%;
+            width: 70%;
+            margin-right: 20%;
+            padding: 30px;
+            margin-left: 5%;
+          
+
+        //posicionamiento de la imagen del producto 2
+        // alto y ancho
+           img{
+            position: absolute;
+            right: 60%;
+            width: 130px;
+            height: 150px;
+           
+        }
+        }
+       
+//Posicionamiento y estilo del texto que van a la par de las imagenes.
+        @mixin textCool {
+            font-family: $font3;
+            color: $color3;
+        }
+           .derecha{
+            margin-left: 45%;
+            position: absolute;
+             top: 90%;
+            
+    // Da estilo al titulo del producto 
+            h2{
+                font-family: $font3;
+                color: $color1;
+                font-size: 16px;
+            }
+// y este al parrafo que se encunetra debajo de ese titulo
+            p{
+             @include textCool;
+            }
+         }
+
+// Da estilo al precio del producto 1
+ .text1{
+    margin-left: 84%;
+    position: absolute;
+    top: 146%;
+    text-align: center;
+    padding: 15px 40px 1px;
+    @include textCool;
+    border-right: $color10 2px dashed;
+}
+
+// Estilo al texto del producto 2
+.derecha1{
+    margin-left: 40%;
+    position: absolute;
+     top: 90%;
+// Da estilo al titulo del producto 
+    h2{
+        font-family: $font3;
+        color: $color1;
+        font-size: 16px;
+    }
+ // y este al parrafo que se encunetra debajo de ese titulo
+    p{
+     @include textCool;
+    }
+ }
+
+ // Da estilo al precion de producto 2
+.text2{
+margin-left: 90%;
+position: absolute;
+top: 146%;
+text-align: center;
+padding: 15px 40px 1px;
+@include textCool;
+}
+}
+// Fin de los estilos del contenedor card
+
+//  Estilos del contedor enviado
+.container-envi{
+    //   Esta parte da estilo al contendor
+    position: absolute;
+    top: 107%;
+    border: $color10 2px solid;
+    margin-left: 20%;
+    width: 70%;
+    height: 26%;
+    margin-bottom: 40px;
+
+    // Este da estilo a la parte de Enviado
+        .tituorden{
+            position: relative;
+            top: 10%;
+            left: 5%;
+            padding: 10px;
+
+
+            h2{
+                font-family: $font3;
+                font-size: large;
+                font-weight: 600;
+            }
+            p{
+                font-family: $font3;
+                color: $color3;
+            }
+        }
+// Este da estilo a la parte de Después..
+        .tituorden1{
+            padding: 10px;
+            position: absolute;
+            top: 10%;
+            left: 53%;
+
+            h2{
+                font-family: $font3;
+                font-size: large;
+                font-weight: 600;
+            }
+            
+            p{
+                font-family: $font3;
+                color: $color3;
+            }
+        }
+// Esto da estilo a la  parte de cosas importantes
+        .lastParag{
+            position: relative;
+            right: 2%;
+            top: 30%;
+            text-align: center;
+            padding: 10px;
+
+            h2{
+                font-family: $font3;
+                font-size: large;
+                font-weight: 600;
+            }
+
+            p{
+                font-family: $font3;
+                color: $color3;
+            }
+
+            a{
+                color: $color1;
+            }
+        }
+ }//Fin de los estilos del contenedor enviado
+//  Fin de los estilos del paso 12

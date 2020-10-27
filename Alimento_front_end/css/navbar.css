@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne&family=Kalam:wght@700&family=Syne:wght@800&family=Gaegu:wght@700&display=swap");
+.container-final {
+  margin-bottom: 35px; }
+  .container-final img {
+    position: absolute;
+    height: 40%;
+    width: 43%;
+    top: 50%;
+    left: 38%;
+    cursor: pointer; }
+  .container-final ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    margin-right: 10%;
+    margin-top: 4%; }
+  .container-final li {
+    display: inline;
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    text-decoration: none;
+    align-self: flex-end; }
+    .container-final li a {
+      color: #939393;
+      font-family: "Syne", sans-serif; }
+    .container-final li a:hover {
+      background-color: #FFE2E2; }
+  .container-final .pet img {
+    position: relative;
+    height: 25%;
+    width: 15%;
+    top: 20%;
+    left: 45%;
+    cursor: pointer; }
+  .container-final .text-pet {
+    position: relative;
+    top: 8%;
+    left: 32%; }
+    .container-final .text-pet h1 {
+      font-family: "Syne", sans-serif;
+      color: #d85d47;
+      font-size: xx-large; }
+
+.container-card {
+  position: absolute;
+  border: #e3e3e3 2px solid;
+  height: 45%;
+  width: 70%;
+  margin-left: 20%; }
+  .container-card .tituorden {
+    top: 60%;
+    position: relative;
+    left: 40%; }
+    .container-card .tituorden h2 {
+      font-family: "Syne", sans-serif;
+      font-size: large;
+      font-weight: 600; }
+  .container-card div.prod {
+    position: relative;
+    top: 30%;
+    width: 70%;
+    padding: 30px;
+    margin-left: 5%; }
+    .container-card div.prod img {
+      position: absolute;
+      right: 53%;
+      width: 130px;
+      height: 150px; }
+  .container-card div.prod1 {
+    position: relative;
+    top: 30%;
+    width: 70%;
+    margin-right: 20%;
+    padding: 30px;
+    margin-left: 5%; }
+    .container-card div.prod1 img {
+      position: absolute;
+      right: 60%;
+      width: 130px;
+      height: 150px; }
+  .container-card .derecha {
+    margin-left: 45%;
+    position: absolute;
+    top: 90%; }
+    .container-card .derecha h2 {
+      font-family: "Syne", sans-serif;
+      color: #d85d47;
+      font-size: 16px; }
+    .container-card .derecha p {
+      font-family: "Syne", sans-serif;
+      color: #939393; }
+  .container-card .text1 {
+    margin-left: 84%;
+    position: absolute;
+    top: 146%;
+    text-align: center;
+    padding: 15px 40px 1px;
+    font-family: "Syne", sans-serif;
+    color: #939393;
+    border-right: #e3e3e3 2px dashed; }
+  .container-card .derecha1 {
+    margin-left: 40%;
+    position: absolute;
+    top: 90%; }
+    .container-card .derecha1 h2 {
+      font-family: "Syne", sans-serif;
+      color: #d85d47;
+      font-size: 16px; }
+    .container-card .derecha1 p {
+      font-family: "Syne", sans-serif;
+      color: #939393; }
+  .container-card .text2 {
+    margin-left: 90%;
+    position: absolute;
+    top: 146%;
+    text-align: center;
+    padding: 15px 40px 1px;
+    font-family: "Syne", sans-serif;
+    color: #939393; }
+
+.container-envi {
+  position: absolute;
+  top: 107%;
+  border: #e3e3e3 2px solid;
+  margin-left: 20%;
+  width: 70%;
+  height: 26%;
+  margin-bottom: 40px; }
+  .container-envi .tituorden {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    padding: 10px; }
+    .container-envi .tituorden h2 {
+      font-family: "Syne", sans-serif;
+      font-size: large;
+      font-weight: 600; }
+    .container-envi .tituorden p {
+      font-family: "Syne", sans-serif;
+      color: #939393; }
+  .container-envi .tituorden1 {
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    left: 53%; }
+    .container-envi .tituorden1 h2 {
+      font-family: "Syne", sans-serif;
+      font-size: large;
+      font-weight: 600; }
+    .container-envi .tituorden1 p {
+      font-family: "Syne", sans-serif;
+      color: #939393; }
+  .container-envi .lastParag {
+    position: relative;
+    right: 2%;
+    top: 30%;
+    text-align: center;
+    padding: 10px; }
+    .container-envi .lastParag h2 {
+      font-family: "Syne", sans-serif;
+      font-size: large;
+      font-weight: 600; }
+    .container-envi .lastParag p {
+      font-family: "Syne", sans-serif;
+      color: #939393; }
+    .container-envi .lastParag a {
+      color: #d85d47; }
+
+/*# sourceMappingURL=navbar.css.map */

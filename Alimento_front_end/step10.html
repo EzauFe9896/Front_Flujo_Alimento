@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimento C.R</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous"> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- En esta parte llamamos a los estilos -->
+<link href="css/email.css" rel="stylesheet"> 
+<!-- --------------------------- -->
+
+    <script>
+        // Esta funcion trae el nombre de la mascota cuando se registra en el primer paso
+            function setName(){
+                var petName = document.getElementById('pet_name').value;
+                var divName = document.getElementsByClassName('name');
+                for (i = 0; i < divName.length; i++) {
+                    divName[i].innerHTML = petName.toUpperCase();
+                }
+            }
+        // ----------------Fin de la función--------------
+        </script>
+</head>
+<body>
+
+      <!-- inicio del contenedor products -->
+      <div class="container-email">
+        <div class="row m-0 w-100 justify-content-center">
+            <div class="col-12">
+              <div class="text-center pt.5">
+                  <h1><strong>ESCOGE LA MEJOR PRESENTACIÓN PARA&nbsp;<span class="name"></span></strong></h1>
+                  <br>
+                <p>Comparte tu correo, lo usaremos para crear un perfil único de&nbsp;<span class="name"></span>.</p>
+                <br><br>
+                <form action="/action_page.php">
+                    <input type="email" id="emails" name="emails" 
+                multiple placeholder="TU EMAIL" class="w3-input w3-hover-light-grey">
+
+                    <br><br>
+
+    <!-- incio del boton next  10 -->
+ <div class="container-botonNext3">
+    <div class="row m-0 w-100">
+        <div class="col-12">
+            <div class="justify-content-center text-center">
+                <a target="_blank" href="">
+<input type="submit" class="btn btn-outline-danger btn-lg" value="Continuar"></input>
+                 </a>
+            </div>
+        </div>
+    </div>
+</div>
+   <!-- Fin del boton next 10 -->
+                  </form>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <!-- Boton de regreso -->
+    <div class="container-botonBack" id="back">
+        <div class="row m-0 w-100">
+            <div class="col-12">
+            <input type="button" class="btn btn-outline-light" value="Atrás" 
+             onclick="history.back()">
+            </div>
+        </div>
+    </div>
+    <!-- Fin del boton back -->
+</body>
+</html>

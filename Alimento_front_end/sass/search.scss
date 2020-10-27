@@ -1,0 +1,357 @@
+@import 'variables';
+@import 'fuentesletters';
+
+//  Estilo del contenedor de busqueda
+.container-search{
+
+margin-bottom: 80px;
+
+h2{
+    font-family: $font3;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+
+
+/*Da estilo al lo que se encuentra en el container-4 como el input search*/
+  .container-4{
+
+    overflow: hidden;
+    width: 40%;
+    white-space: nowrap;
+    float: right;
+    margin-right: 30%;
+  
+  /*Da estilo al input search*/
+  @mixin borde{
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 15px;
+    border: $color1 1px solid;
+  }
+    input#search{
+
+    width: 100%;
+    height: 36px;
+    background: $color6;
+    font-size: 10pt;
+    float: none;
+    font-family: $font3;
+    color: $color7;
+    text-align: center;
+    text-transform: uppercase;
+    @include borde;
+   
+  }
+  
+  
+  /*Da el estilo al icono de la lupa en el search*/
+  @mixin border {
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-top-right: 8px;
+    -moz-border-radius-bottom-right: 8px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+   
+  }
+
+  @mixin transition{
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+
+   button.icon{
+    
+    @include border;
+    @include transition;
+
+    border: none;
+    background: $color6;
+    height: 34px;
+    width: 33.5px;
+    color: $color1;
+    opacity: 0;
+    margin-top: 18px;
+    font-size: 10pt;
+   
+  }
+
+  }
+// Estilo al contenedor de busqueda avanzada
+  .container-busAvan{
+    position: relative;
+    left: 35%;
+    margin-top: 4%;
+
+    // Esto oculta a las opciones de busqueda avanzada
+    #searchAd{
+      display: none;
+    }
+
+    // Da estilos a los inputs de esta clase
+    .BusqAvanzada{
+     
+      input{
+        width: 70%;
+        text-align: center;
+        font-family: $font3;
+        color: $color7;
+      }
+    }
+// EStilo al  btn ver menos que oculta la bussqueda avanzada
+    a{
+      top: 80%;
+      position: absolute;
+      left: 14%;
+      color: $color1;
+      font-family: $font3;
+    }
+  }//Fin del contenedor de busqueda avanzada
+}
+    // Fin de los estilos del contenedor de busqueda
+
+
+  /*Mantiene activo el, enfoca el icono de la lupa en el search*/
+  .container-4:hover button.icon, 
+  .container-4:active button.icon, 
+  .container-4:focus button.icon{
+      outline: none;
+      opacity: 1;
+      margin-left: -40px;
+      margin-top: 30px;/* <--- Aquí hace que cuando el curso se dirije hacia el search se traslada hacia el center del navbar*/
+    }
+ 
+   /* Change the color of links on hover */
+  .container-4:hover button.icon:hover{
+      background: $color5;
+    }
+
+    // Estilos del cotenedor card
+    .container-card{
+
+      position: absolute;
+      left: 31.5%;
+      width: 37%;
+      height: 65%;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border: $color1 1px solid;
+      padding: 10px;
+
+      // Estilo del card #1
+      div.card{
+
+        left: 10%;
+        top: 15%;
+        width: 88%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ 
+        // Estilo del contenedor header
+        .card-header{
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          background-color: $color5;
+  
+          h5{
+            font-family: $font3;
+            color: $color1;
+            font-size: large;
+          }
+    
+          p{
+            font-family: $font3;
+            color: $color3;
+          }
+        }
+        
+        // Estilo del contenedor body
+        .card-body{
+          img{
+            position: relative;
+            width: 115px;
+            height: 150px;
+            left: 5%;
+            top: 40%;
+          }
+          img:hover{
+            border: 5px solid $color4;
+          }
+        }
+
+    }//Fin de los estilo del card #1
+
+
+  // Estilo del btn ver más
+    a{
+      position: absolute;
+      top: 88%;
+      left: 45.9%;
+      font-family: $font3;
+      color: $color1;
+    }
+    // Estilo al btn busqueda avanzada
+    .avanzada{
+      a{
+        font-family: $font3;
+        color: $color1;
+        position: absolute;
+        top: 2%;
+        left: 36%;
+            
+      }
+    }
+
+  
+  }//Fin de los estilos del contenedor card
+
+  // Estilos del contendor productos
+  .container-products{
+
+    margin-top: 5%;
+    position: relative;
+    width: 70%;
+    margin-left: 15%;
+
+    // No muestra los productos hasta que se de click en ver más y oculta los escontrados a la vez
+    #products, #busqueda{
+      display: none;
+    }
+
+
+
+    // Estilo del card #2
+    div.card{
+
+      left: 1%;
+      top: 10%;
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+      // Estilo to the las image de la segunda fila
+      img{
+        position: relative;
+        width: 125px;
+        height: 180px;
+        left:21%;
+        top: 8%;
+        cursor: pointer;
+      }
+      img:hover{
+        border: 5px solid $color4;
+      }
+
+      // Estilo del contenedor header
+      .card-header{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: $color5;
+
+        h5{
+          font-family: $font3;
+          color: $color1;
+          font-size: large;
+        }
+  
+        p{
+          font-family: $font3;
+          color: $color3;
+        }
+      }
+      
+      // Estilo del contenedor body
+      .card-body{
+        img{
+          position: relative;
+          width: 125px;
+          height: 180px;
+          left: 14%;
+          top: 5%;
+          cursor: pointer;
+        }
+          h5{
+            color: $color4;
+          }
+          p{
+            color: $color4;
+          }
+       
+      }
+
+  }//Fin de los estilo del card #2
+
+// Estilo a los botones de la paginación
+  .pagination{
+    position: absolute;
+    left: 46%;
+    top: 110%;
+
+    a{
+     font-family: $font3;
+     padding: 5px;
+     color: $color7;
+     font-size: 20px;
+    }
+  }
+  }// Fin de estos estilos de container products
+
+  //  Estilo del contenedor del btn next
+  .container-botonNext{
+//  Estilo  del botón continuar
+@mixin styleboton{
+  position: absolute;
+  right: 39.65%;
+  background-color: $color5;
+  border-radius: 45px;
+  color: $color1;
+  padding: 2px; 
+  width: 20%;
+  height: 44px;
+  }
+    
+    input{
+      margin-top: 28%;
+    @include styleboton; 
+    margin-bottom: 25px;
+}
+input:hover{
+    background: $color1;
+    color: $color4;
+}
+}
+// Fin del estilo del btn next
+
+//  Estilo  del botón regresar
+
+.container-botonBack {
+  @mixin botonback{
+    position: absolute;
+    right: 46.55%;
+    background-color: $color5;
+    border-radius: 45px;
+    color: $color2;
+    padding: 2px; 
+    width: 6%;
+    height: 30px;
+    margin-bottom: 60px;
+    font-family: $font3;
+    font-size: 14px;
+  }
+  input{
+    margin-top: 33%;
+@include botonback;
+}
+
+}
+#back input:hover{
+  background: $color1;
+  color: $color4;
+}
+//   Fin del esstilo del botón regresar
+

@@ -1,0 +1,324 @@
+@import 'fuentesletters';//Importa las fuentes para los textos
+@import 'variables';//Importa los colores
+
+// Esto muestra y oculta el mensaje si la password esta cool or not.
+.ocultar {
+    display: none;
+}
+ 
+.mostrar {
+    display: block;
+}
+
+// Comienzo del contenedor formulario
+.container-formu{
+
+    // Estilo al  titulo principal Resumen
+    h1{
+        font-family: $font3;
+        font-size: x-large;
+        color: $color1;
+    }
+    // Estilo al titulo de info personal
+    h2{
+        font-family: $font3;
+        font-size: x-large;
+    }
+    // Estilo al titulo de info Envío
+    h3{
+        font-family: $font3;
+        font-size: x-large;
+    }
+       // Estilo al titulo de info Targeta
+    h4{
+        font-family: $font3;
+        font-size: x-large;
+    }
+
+    // Estilo a la sección de info personal
+    .infopersonal{
+        margin-left: 20%;
+        margin-bottom: 35px;
+        input{
+            width: 120%;
+            font-family: $font3;
+        }
+    }
+    
+    // Estilo a la sección info envío
+    .infoenvio{
+        margin-left: 20%;
+        margin-bottom: 35px;
+       input{
+            width: 100%;
+            font-family: $font3;
+        }
+//   Da estilo al boton guardar
+        button{
+            border-radius: 45px;
+            width: 40%;
+            margin-left: 5%;
+            background-color: $color5;
+            color: $color1;
+            margin-bottom: 25px;
+          }
+          button:hover{
+              background: $color1;
+              color: $color4;
+          }
+        //   Fin  del estilo del boton guardar
+
+        // Da estilo al titulo del modal
+.modal-header{
+    font-family: $font3;
+    .modal-title{
+        font-size: large;
+    }
+    i{
+        color:$color1;
+    }
+}
+// Fin de este estilo
+    
+          // Estilos del modal foter
+.modal-footer{
+    // Centra todo el contenido que se encuentra en el footer
+   justify-content: center;
+// estilos del botón cancelar
+   input{
+    width: 40%;
+    background-color: $color5;
+    border-radius: 45px;
+    color: $color1;
+    font-family: $font3;
+    margin-bottom: 25px;
+    margin-left: 3%;
+   }
+   input:hover{
+    background: $color1;
+    color: $color4;
+}
+}
+// Fin de los estilos del modal-footer
+    }
+    // Fin de los estilos de info envio
+
+    // Da estilo al texto de compartir ubicación
+    .textmap{
+        position: absolute;
+        margin-left: 180%;
+        top: 9%;
+        a{
+        font-family: $font3;
+        color: $color3;
+        }
+        // da estilo al icono pin map
+        i{
+          
+            position: absolute;
+            margin-left: 110%;
+            top: 1%; 
+            color: $color1;
+            cursor: pointer;
+        }
+    }
+    // Fin de este estilo
+    
+    // Estilo a los inputs Cantón, provincia, distrito
+    .home{
+        margin-left: 3%;
+      
+        input{
+            width: 85%;
+            font-family: $font3;
+        }
+    }
+    
+  // Estilo a la sección info tageta
+  .lasttitu{
+    margin-left: 20%;
+
+   input{
+        width: 90%;
+        font-family: $font3;
+    }
+}
+    // Estilo al titulo orden
+  .tituorden{
+    margin-left: 12%;
+    h2{
+        font-family: $font3;
+        font-size: x-large;
+    }
+  }
+//   Se usa para dar estilo algunos textos
+    @mixin textCool {
+        font-family: $font3;
+        color: $color3;
+     }
+
+//posicionamiento de las imagenes de los productos
+// alto y ancho
+   img{
+    margin-left: 4%;
+    width: 115px;
+    height: 140px;
+}
+//SOOMBREADO Y ESTILO DEL CARD
+div.card {
+    width: 75%;
+    margin-right: 20%;
+    padding: 30px;
+    margin-left: 11%;
+}
+
+//Posicionamiento y estilo del texto en el card
+// Coloca al card y lo que esta dentro de el hacia el centro
+// alejandolo de la izq.
+.derecha{
+    margin-left: 35%;
+    position: absolute;
+     top: 15%;
+     // Da estilo al subtitulo del producto 
+    h2{
+        font-family: $font3;
+        color: $color1;
+        font-size: larger;
+    }
+ // y este al parrafo que se encunetra debajo de ese subtitulo
+    p{
+     @include textCool;
+    }
+ }
+ .derecha1{
+    margin-left: 9%;
+    position: absolute;
+    top: 15px;
+    margin-bottom: 20px;
+    padding: 5px;
+     // Da estilo al subtitulo del producto 
+    h2{
+        font-family: $font3;
+        color: $color7;
+        font-size: large;
+        margin-top: 10px;
+    }
+ // y este al parrafo que se encunetra debajo de ese subtitulo
+    p{
+     @include textCool;
+    }
+ }
+ .derecha2{
+    margin-left: 9%;
+    position: absolute;
+    top: 15%;
+    padding-bottom: 20px;
+     // Da estilo al subtitulo del producto 
+    h2{
+        font-family: $font3;
+        color: $color3;
+        font-size: large;
+        margin-top: 10px;
+    }
+    h3{
+        color: $color1;
+        font-family: $font3;
+        font-size: x-large;
+    }
+ // y este al parrafo que se encunetra debajo de ese subtitulo
+    p{
+     @include textCool;
+    }
+ }
+ // Este da estilo al parrafo 1 paquete
+ .texto1{
+     margin-left: 27.5%;
+     position: absolute;
+     top: 35%;
+     text-align: center;
+     padding: 15px 40px 1px;
+     @include textCool;
+//  Da estilo al boton editar
+     button{
+        left: 27%;
+        position: absolute;
+        top: 85%;
+        text-align: center;
+        color: $color1;
+    }
+ }
+// Da estilo al precio
+ .text1{
+    margin-left: 60%;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    padding: 15px 40px 1px;
+    @include textCool;
+// Da estilo al boton eliminar
+    button{
+        left: 27%;
+        position: absolute;
+        top: 85%;
+        text-align: center;
+        color: $color1;
+    }
+}
+// Da estilo a la fecha
+   .texto2{
+       margin-left: 62%;
+       margin-top: 20px;
+    
+       p{
+        color: $color1;
+        font-family: $font3;
+        font-size: x-large;
+       }
+   }
+// Da estilo a los precios
+   .texto3{
+       margin-left: 73%;
+       margin-top: 10px;
+       h2{
+           margin-left: 6%;
+        font-family: $font3;
+        color: $color3;
+        font-size: large;
+    }
+    p{
+        @include textCool;
+        margin-left: 23%;
+    }
+    h3{
+        color: $color1;
+        font-family: $font3;
+        font-size: x-large;
+        margin-left: 2%;
+    }
+   }
+//    Fin de estos estilos
+
+  // estilos del botón pagar
+  .btn{
+    top:100%;
+    left: 114%;
+    font-family: $font3;
+    margin-bottom: 35px;
+  button{
+    position: absolute;
+    background-color: $color5;
+    border-radius: 45px;
+    color: $color1;
+    padding: 2px; 
+    width: 70%;
+    height: 50px;
+    font-size: 20px;
+   }
+
+   button:hover{
+    background: $color1;
+    color: $color4;
+}
+  }
+}
+// Fin de los estilo del container formulario

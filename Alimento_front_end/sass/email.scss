@@ -1,0 +1,91 @@
+@import 'variables';//Se importan las variables de colores
+@import 'fuentesletters';//Se inportan las fuentes de las letras
+
+// Inicio de los estilos del contenedor email del paso 10
+.container-email{
+    // Esto le da estilo al input email
+    @mixin inputStyle{
+        box-sizing: border;
+        padding: 0.5em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 25%;
+        margin-left: 38%; 
+    }
+// Esto le da estilo al parrafo
+    @mixin textCool {
+        font-family: $font3;
+        color: $color3;
+     }
+// Este le da estilo al boton
+     @mixin styleboton{
+        position: absolute;
+        right: 39.65%;
+        background-color: $color5;
+        border-radius: 45px;
+        color: $color1;
+        font-size: 14px;
+        padding: 2px; 
+        width: 20%;
+        height: 44px;
+        }
+        // Estilo al titulo
+    h1{
+    margin-top: 100px;
+    font-family: $font3;
+    font-size: 15px;
+    }
+    // Aqui se incluye el mixin inputstyle 
+    // y le da estilo al parrafo
+    p{
+        @include textCool;
+        margin-bottom: 25px;
+    }
+//  aqui se incluye el mixin que le da estilo al input
+    input{
+        @include inputStyle; 
+    }
+//   Estilo al contenedor del boton next
+    .container-botonNext3 {
+// aqui se incluye el mixin styleboton que le da estilo al boton
+        input{
+        @include styleboton; 
+    }
+    // Hover del boton
+    input:hover{
+        background: $color1;
+        color: $color4;
+    }
+    }
+
+}
+// Estilo al boton regresar
+@mixin botonback{
+    position: absolute;
+    margin-top: 5%;
+    right: 46.55%;
+    background-color: $color5;
+    border-radius: 45px;
+    color: $color2;
+    padding: 2px; 
+    width: 6%;
+    height: 30px;
+    margin-bottom: 60px;
+    font-family: $font3;
+    font-size: 14px;
+}
+// Estilo al boton regresar
+.container-botonBack {
+    
+    input{
+  @include botonback;
+}
+
+}
+// hover del boton regresar
+#back input:hover{
+    background: $color1;
+    color: $color4;
+}
+// Fin de los estilos del contenedor email

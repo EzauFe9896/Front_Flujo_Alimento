@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimento C.R</title>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+crossorigin="anonymous"> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- En esta parte llamamos a los estilos -->
+<link href="css/form.css" rel="stylesheet"> 
+<!-- --------------------------- -->
+
+<script>
+    // Esta funcion trae el nombre de la mascota cuando se registra en el primer paso
+        function setName(){
+            var petName = document.getElementById('pet_name').value;
+            var divName = document.getElementsByClassName('name');
+            for (i = 0; i < divName.length; i++) {
+                divName[i].innerHTML = petName.toUpperCase();
+            }
+        }
+    // ----------------Fin de la función--------------
+
+
+// Esta función valida la contreseña
+function validarPasswd(){
+pass1 = document.getElementById('pass1');
+pass2 = document.getElementById('pass2');
+
+ // Verificamos si las constraseñas no coinciden 
+ if (pass1.value != pass2.value) {
+ 
+ // Si las constraseñas no coinciden mostramos un mensaje 
+ document.getElementById("error").classList.add("mostrar");
+
+ return false;
+} else {
+
+ // Si las contraseñas coinciden ocultamos el mensaje de error
+ document.getElementById("error").classList.remove("mostrar");
+
+ // Mostramos un mensaje mencionando que las Contraseñas coinciden 
+ document.getElementById("ok").classList.remove("ocultar");
+
+ // Desabilitamos el botón de login 
+ document.getElementById("pagar").disabled = true;
+
+ // Refrescamos la página (Simulación de envío del formulario) 
+ setTimeout(function() {
+     location.reload();
+ }, 3000);
+
+ return true;
+}
+
+// var espacios = false;
+// var cont = 0;
+
+// while (!espacios && (cont < pass1.length)) {
+//   if (pass1.charAt(cont) == " ")
+//     espacios = true;
+//   cont++;
+// }
+// if (espacios) {
+//   alert ("La contraseña no puede contener espacios en blanco");
+//   return false;
+// }
+// if (pass1.length == 0 || pass2.length == 0) {
+//   alert("Los campos de la password no pueden quedar vacios");
+//   return false;
+// }
+
+// if (pass1 != pass2) {
+//   alert("Las passwords deben de coincidir");
+//   return false;
+// } else {
+//   alert("Todo esta correcto");
+//   return true; 
+// }
+
+}
+//  Fin de la función validar contraseña
+
+
+// Función que valida el campo de la targeta
+function onkeyPress(event){
+
+    var creditcard = document.getElementById('creditcard');
+ 
+ var send        = document.getElementById('send');
+ 
+send.addEventListener('click', function(e){
+    e.preventDefault();
+    alert('Tarjate de credito es: '+creditcard.value.replace(/ /g, '') );
+});
+ 
+    creditcard.value = creditcard.value.replace(/[a-zA-Z]/g, '');
+ 
+    //validamos si es american express para esto quitamos todos los espacios en blaco y luego veriricamos que tenga 4, 6 y 5 digitos.
+    if(creditcard.value.replace(/ /g, '').match(/\b(\d{4})(\d{6})(\d{5})\b/))
+        creditcard.value = creditcard.value
+            .replace(/\W/gi, '')//quitamos todos los espacios demas
+            .replace(/\b(\d{4})(\d{6})(\d{5})\b/, '$1 $2 $3') //si cumple el formato añadimos 3,6 y 5 digitos
+            .trim();
+    else //si no es american express entonces es una tarjeta visa o master card
+        creditcard.value = creditcard.value
+            .replace(/\W/gi, '')
+            .replace(/(.{4})/g, '$1 ')
+            .trim()
+}
+ 
+creditcard.addEventListener('keypress',onkeyPress);
+creditcard.addEventListener('keydown',onkeyPress);
+creditcard.addEventListener('keyup',onkeyPress);
+// Fin de la función validar targeta
+    </script>
+</head>
+
+<body>
+    <div class="container-formu"><!-- Comienzo del contenedor -->
+        <div class="row m-0 w-100 justify-content-center"><!-- Comienzo fila # 1 -->
+            <div class="col-12">
+              <div class="text-center pt.5">
+                  <br>
+                  <h1>RESUMEN</h1>
+              </div>
+            </div>
+        </div><!-- Fin fila # 1 -->
+        
+        <br>
+
+        <div class="row m-0 w-100"><!-- Comienzo fila # 2 -->
+            <div class="col">
+                <div id="msg"></div>
+                <!-- Mensajes de Verificación -->
+                <div id="error" class="alert alert-danger ocultar" role="alert">
+                    ¡Las Contraseñas no coinciden, vuelve a intentar!
+                </div>
+                <div id="ok" class="alert alert-success ocultar" role="alert">
+                    ¿Las Contraseñas coinciden ! --> Procesando formulario -->
+                </div>
+                <!-- Fin Mensajes de Verificación -->
+
+<!-- Comienzo del formulario -->
+<form id="miformulario" onsubmit="validarPasswd(); return false">
+  <div class="form-row"><!-- Comienzo de esta fila---->
+       <div class="col-lg-12">
+           <div class="infopersonal"><!-- Comienzo de la clase info personal ---->
+          <div class="form-group col-md-5">
+            <h2>INFORMACIÓN&nbsp;PERSONAL</h2>
+            <input type="text" class="w3-input w3-hover-light-grey" id="validationDefault01" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group col-md-5">
+            <input type="email" class="w3-input w3-hover-light-grey" id="inputEmail" placeholder="Tu correo" required>
+          </div>
+          <div class="form-group col-md-5">
+            <input type="password" class="w3-input w3-hover-light-grey" id="pass1" placeholder="Contraseña" required>
+        </div>
+        <div class="form-group col-md-5">
+            <input type="password" class="w3-input w3-hover-light-grey" id="pass2" placeholder="Confirmar contraseña" required>
+        </div>
+    </div><!-- Fin de la clase info personal---->
+       </div>
+ </div><!-- Fin de esta filas---->
+
+<div class="form-row"><!-- Comienzo de esta fila -->
+  <div class="col-lg-12">
+    <div class="infoenvio"><!-- Comienzo de la clase info envío---->
+     <div class="form-group col-md-9">
+        <h3>INFORMACIÓN&nbsp;DE&nbsp;ENVÍO</h3>
+        <input type="text" class="w3-input w3-hover-light-grey" id="direccion" placeholder="Dirección" required>
+    </div>
+  <div class="form-group col-md-4">
+    <input type="text" id="numero" class="w3-input w3-hover-light-grey" placeholder="# Apt, #Casa, etc" required> 
+    
+    <div class="textmap"><!-- Botón que abre el mapa dando click en icono también lo dirige al mapa-->
+    <font size="5"><i class="fa fa-map-marker" aria-hidden="true"
+     data-toggle="modal" data-target="#myModal"></i></font>
+    <a href="#sharelocation" data-toggle="modal" data-target="#myModal">
+        Compartir&nbsp;ubicación </a> 
+    </div><!-- Fin del botón que abre el mapa -->
+  </div>
+
+  <!-- Comienzo The Modal Maps -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Mueva el pin hacia donde desee o haga zoom&nbsp;
+              <i class="fa fa-search-plus" aria-hidden="true"></i></h4>
+          <a type="button" class="close" data-dismiss="modal">&times;</a>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4042191.9815413887!2d-87.05385679411027!3d8.357007841895712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f92e56221acc925%3A0x6254f72535819a2b!2sCosta%20Rica!5e0!3m2!1ses-419!2scr!4v1603576651722!5m2!1ses-419!2scr" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        <input type="button" class="btn btn-outline-light" data-dismiss="modal" value="Cancelar"></input>
+        <button type="submit" class="btn btn-outline-danger">Guardar</button>
+        </div>
+        
+      </div>
+    </div>
+  </div><!-- Fin The Modal Maps---->
+      
+     <div class="home"><!-- Comienzo de la clase home---->
+    <div class="row">
+        <div class="form-group col-md-4">
+            <input type="text" list="provincia" class="w3-input w3-hover-light-grey"
+             placeholder="Provincia" required>
+            <datalist id="provincia">
+                <option selected>GUANACASTE</option>
+                <option>SAN JOSÉ</option>
+                <option>CARTAGO</option>
+                <option>ALAJUELA</option>
+                <option>HEREDIA</option>
+                <option>LIMÓN</option>
+                <option>PUNTARENAS</option>
+              </datalist>
+        </div>
+        <div class="form-group col-md-4">
+            <input type="text" list="canton" class="w3-input w3-hover-light-grey" placeholder="Cantón" required>
+        </div>
+        <div class="form-group col-md-4">
+            <input type="text" list="distrito" class="w3-input w3-hover-light-grey" placeholder="Distrito" required>
+        </div>
+    </div>
+</div><!-- Fin de la clase home ---->
+
+<div class="form-group col-md-5">
+        <input type="tel" id="telefono" class="w3-input w3-hover-light-grey" placeholder="Número de teléfono" required>
+</div>
+    </div><!-- Fin de la clase info envío ---->
+  </div>
+</div><!-- Fin de esta fila -->
+
+<div class="form-row"><!-- Comienzo de esta fila -->
+    <div class="lasttitu">
+        <h4>&nbsp;&nbsp;&nbsp;INFORMACIÓN DE LA TARGETA</h4>
+   
+        <!-- comienzo de esta columna -->
+<div class="col-lg-12">
+    <div  class="row">
+         <div class="form-group col-md-6">
+        <input type="text" id="creditcard" maxlength="19" class="w3-input w3-hover-light-grey" placeholder="Número de targeta" required>
+    </div>
+    <div class="form-group col-md-3">
+        <input type="text" id="numero" class="w3-input w3-hover-light-grey" placeholder="MM - AA" required>
+    </div>
+    <div class="form-group col-md-3">
+        <input type="text" id="numero" class="w3-input w3-hover-light-grey" placeholder="CVC" required>
+    </div>
+</div>
+</div><!-- Fin de esta columna -->
+
+</div>
+ </div><!-- Fin de esta fila -->
+
+ <div class="btn">
+    <button type="submit" id="pagar" class="btn btn-outline-danger">Pagar</button>
+</div>
+
+    </form><!-- Fin del formulario -->
+            </div><!-- Fin de esta coulumna -->
+
+        <div class="col"><!-- Comienzo de columna de la info de la orden -->
+    <div class="tituorden">
+    <h2>ORDEN DE&nbsp;<span class="name"></span></h2>
+   </div>
+    <br>   
+<div class="row m-0 w-100"><!-- Comienzo Fila # 1 del producto 1 -->
+    <div class="col-md-12">
+        <div class="card">
+            <img src="images/products/p1.png" alt="NutriSource1">
+            <div class="derecha">
+            <h2>NUTRISOURCE</h2>
+            <p>Cachorro - Pequeño</p>
+        </div>
+        <div class="texto1">
+            <p>30&nbsp;LB</p>
+            <button type="button" class="btn btn-link">Editar</button>
+        </div>
+        <div class="text1">
+            <p>₡40.000</p>
+            <button type="button" class="btn btn-link">Eliminar</button>
+            </div>
+              </div>
+            </div>
+        </div><!-- Fin Fila # 1 del producto 1 -->
+
+        <div class="row m-0 w-100"><!-- Comienzo Fila # 2 del producto 2 -->
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="images/products/p2.png" alt="NutriSource2">
+                    <div class="derecha">
+                    <h2>NUTRISOURCE</h2>
+                    <p>Treat con pollo</p>
+                </div>
+                <div class="texto1">
+            <p>1&nbsp;paq</p>
+            <button type="button" class="btn btn-link">Editar</button>
+                </div>
+                <div class="text1">
+                <p>₡15.000</p>
+                <button type="button" class="btn btn-link">Eliminar</button>
+                </div>
+                      </div>
+                    </div>
+        </div><!-- Fin Fila # 2 del producto 2 -->
+
+        <div class="row m-0 w-100"><!-- Comienzo Fila # 3 entrega -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="derecha1">
+                    <h2>Primera entrega</h2>
+                    <p>Estimida</p>
+                    <br>
+                    <br>
+                </div>
+                <div class="texto2">
+                    <p>25 - 12 - 2020</p>
+                </div>
+            </div>
+        </div>
+        </div><!-- Fin Fila # 3 entrega -->
+
+        <div class="row m-0 w-100"><!-- Comienzo Fila # 4 total -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="derecha2">
+                    <h2>Subtotal</h2>
+                    <p>IVA<br>Descuento<br>Envío</p>
+                    <h3>TOTAL</h3>
+                </div>
+                <div class="texto3">
+                    <h2>₡55.000</h2>
+                    <p>₡6.000<br>₡2.000<br>₡2.000</p>
+                    <h3>₡61.000</h3>
+                </div>
+            </div>
+        </div>
+        </div><!-- Fin Fila # 4 total -->
+        <br>
+    </div><!-- Fin de esta columna -->
+</div><!-- Fin de la fila # 2 -->
+
+</div><!-- Fin del contenedor -->
+        
+
+</body>
+</html>

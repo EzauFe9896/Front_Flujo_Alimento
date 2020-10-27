@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne&family=Kalam:wght@700&family=Syne:wght@800&family=Gaegu:wght@700&display=swap");
+.ocultar {
+  display: none; }
+
+.mostrar {
+  display: block; }
+
+.container-formu h1 {
+  font-family: "Syne", sans-serif;
+  font-size: x-large;
+  color: #d85d47; }
+.container-formu h2 {
+  font-family: "Syne", sans-serif;
+  font-size: x-large; }
+.container-formu h3 {
+  font-family: "Syne", sans-serif;
+  font-size: x-large; }
+.container-formu h4 {
+  font-family: "Syne", sans-serif;
+  font-size: x-large; }
+.container-formu .infopersonal {
+  margin-left: 20%;
+  margin-bottom: 35px; }
+  .container-formu .infopersonal input {
+    width: 120%;
+    font-family: "Syne", sans-serif; }
+.container-formu .infoenvio {
+  margin-left: 20%;
+  margin-bottom: 35px; }
+  .container-formu .infoenvio input {
+    width: 100%;
+    font-family: "Syne", sans-serif; }
+  .container-formu .infoenvio button {
+    border-radius: 45px;
+    width: 40%;
+    margin-left: 5%;
+    background-color: #FFE2E2;
+    color: #d85d47;
+    margin-bottom: 25px; }
+  .container-formu .infoenvio button:hover {
+    background: #d85d47;
+    color: #FFFFFF; }
+  .container-formu .infoenvio .modal-header {
+    font-family: "Syne", sans-serif; }
+    .container-formu .infoenvio .modal-header .modal-title {
+      font-size: large; }
+    .container-formu .infoenvio .modal-header i {
+      color: #d85d47; }
+  .container-formu .infoenvio .modal-footer {
+    justify-content: center; }
+    .container-formu .infoenvio .modal-footer input {
+      width: 40%;
+      background-color: #FFE2E2;
+      border-radius: 45px;
+      color: #d85d47;
+      font-family: "Syne", sans-serif;
+      margin-bottom: 25px;
+      margin-left: 3%; }
+    .container-formu .infoenvio .modal-footer input:hover {
+      background: #d85d47;
+      color: #FFFFFF; }
+.container-formu .textmap {
+  position: absolute;
+  margin-left: 180%;
+  top: 9%; }
+  .container-formu .textmap a {
+    font-family: "Syne", sans-serif;
+    color: #939393; }
+  .container-formu .textmap i {
+    position: absolute;
+    margin-left: 110%;
+    top: 1%;
+    color: #d85d47;
+    cursor: pointer; }
+.container-formu .home {
+  margin-left: 3%; }
+  .container-formu .home input {
+    width: 85%;
+    font-family: "Syne", sans-serif; }
+.container-formu .lasttitu {
+  margin-left: 20%; }
+  .container-formu .lasttitu input {
+    width: 90%;
+    font-family: "Syne", sans-serif; }
+.container-formu .tituorden {
+  margin-left: 12%; }
+  .container-formu .tituorden h2 {
+    font-family: "Syne", sans-serif;
+    font-size: x-large; }
+.container-formu img {
+  margin-left: 4%;
+  width: 115px;
+  height: 140px; }
+.container-formu div.card {
+  width: 75%;
+  margin-right: 20%;
+  padding: 30px;
+  margin-left: 11%; }
+.container-formu .derecha {
+  margin-left: 35%;
+  position: absolute;
+  top: 15%; }
+  .container-formu .derecha h2 {
+    font-family: "Syne", sans-serif;
+    color: #d85d47;
+    font-size: larger; }
+  .container-formu .derecha p {
+    font-family: "Syne", sans-serif;
+    color: #939393; }
+.container-formu .derecha1 {
+  margin-left: 9%;
+  position: absolute;
+  top: 15px;
+  margin-bottom: 20px;
+  padding: 5px; }
+  .container-formu .derecha1 h2 {
+    font-family: "Syne", sans-serif;
+    color: #140e0e;
+    font-size: large;
+    margin-top: 10px; }
+  .container-formu .derecha1 p {
+    font-family: "Syne", sans-serif;
+    color: #939393; }
+.container-formu .derecha2 {
+  margin-left: 9%;
+  position: absolute;
+  top: 15%;
+  padding-bottom: 20px; }
+  .container-formu .derecha2 h2 {
+    font-family: "Syne", sans-serif;
+    color: #939393;
+    font-size: large;
+    margin-top: 10px; }
+  .container-formu .derecha2 h3 {
+    color: #d85d47;
+    font-family: "Syne", sans-serif;
+    font-size: x-large; }
+  .container-formu .derecha2 p {
+    font-family: "Syne", sans-serif;
+    color: #939393; }
+.container-formu .texto1 {
+  margin-left: 27.5%;
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  padding: 15px 40px 1px;
+  font-family: "Syne", sans-serif;
+  color: #939393; }
+  .container-formu .texto1 button {
+    left: 27%;
+    position: absolute;
+    top: 85%;
+    text-align: center;
+    color: #d85d47; }
+.container-formu .text1 {
+  margin-left: 60%;
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  padding: 15px 40px 1px;
+  font-family: "Syne", sans-serif;
+  color: #939393; }
+  .container-formu .text1 button {
+    left: 27%;
+    position: absolute;
+    top: 85%;
+    text-align: center;
+    color: #d85d47; }
+.container-formu .texto2 {
+  margin-left: 62%;
+  margin-top: 20px; }
+  .container-formu .texto2 p {
+    color: #d85d47;
+    font-family: "Syne", sans-serif;
+    font-size: x-large; }
+.container-formu .texto3 {
+  margin-left: 73%;
+  margin-top: 10px; }
+  .container-formu .texto3 h2 {
+    margin-left: 6%;
+    font-family: "Syne", sans-serif;
+    color: #939393;
+    font-size: large; }
+  .container-formu .texto3 p {
+    font-family: "Syne", sans-serif;
+    color: #939393;
+    margin-left: 23%; }
+  .container-formu .texto3 h3 {
+    color: #d85d47;
+    font-family: "Syne", sans-serif;
+    font-size: x-large;
+    margin-left: 2%; }
+.container-formu .btn {
+  top: 100%;
+  left: 114%;
+  font-family: "Syne", sans-serif;
+  margin-bottom: 35px; }
+  .container-formu .btn button {
+    position: absolute;
+    background-color: #FFE2E2;
+    border-radius: 45px;
+    color: #d85d47;
+    padding: 2px;
+    width: 70%;
+    height: 50px;
+    font-size: 20px; }
+  .container-formu .btn button:hover {
+    background: #d85d47;
+    color: #FFFFFF; }
+
+/*# sourceMappingURL=form.css.map */

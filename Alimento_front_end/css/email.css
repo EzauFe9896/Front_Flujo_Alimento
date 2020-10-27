@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne&family=Kalam:wght@700&family=Syne:wght@800&family=Gaegu:wght@700&display=swap");
+.container-email h1 {
+  margin-top: 100px;
+  font-family: "Syne", sans-serif;
+  font-size: 15px; }
+.container-email p {
+  font-family: "Syne", sans-serif;
+  color: #939393;
+  margin-bottom: 25px; }
+.container-email input {
+  box-sizing: border;
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 25%;
+  margin-left: 38%; }
+.container-email .container-botonNext3 input {
+  position: absolute;
+  right: 39.65%;
+  background-color: #FFE2E2;
+  border-radius: 45px;
+  color: #d85d47;
+  font-size: 14px;
+  padding: 2px;
+  width: 20%;
+  height: 44px; }
+.container-email .container-botonNext3 input:hover {
+  background: #d85d47;
+  color: #FFFFFF; }
+
+.container-botonBack input {
+  position: absolute;
+  margin-top: 5%;
+  right: 46.55%;
+  background-color: #FFE2E2;
+  border-radius: 45px;
+  color: #707070;
+  padding: 2px;
+  width: 6%;
+  height: 30px;
+  margin-bottom: 60px;
+  font-family: "Syne", sans-serif;
+  font-size: 14px; }
+
+#back input:hover {
+  background: #d85d47;
+  color: #FFFFFF; }
+
+/*# sourceMappingURL=email.css.map */

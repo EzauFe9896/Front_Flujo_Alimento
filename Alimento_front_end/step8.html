@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimento C.R</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous"> 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- En esta parte llamamos a los estilos -->
+<link href="css/search.css" rel="stylesheet"> 
+<!-- --------------------------- -->
+
+
+<script>
+  //Esta función llama al nombre de la mascota cuando se registra en el primer paso.
+  function setName(){
+      var petName = document.getElementById('pet_name').value;
+      var divName = document.getElementsByClassName('name');
+      for (i = 0; i < divName.length; i++) {
+          divName[i].innerHTML = petName.toUpperCase();
+      }
+  }
+
+// Esta fución llama a los productos
+  function mostrarProd(){
+   document.getElementById('products').style.display = 'block';
+   document.getElementById('busqueda').style.display = 'none';
+   document.getElementById('busqA').style.display = 'block';
+  }
+
+  // Esta fución llama a busqueda avanzada
+  function mostrarBusqueda(){
+   document.getElementById('searchAd').style.display = 'block';
+   document.getElementById('busqueda').style.display = 'none';
+  }
+
+    // Esta fución oculta la busqueda avanzada
+    function ocultarBusquedaAvanzada(){
+   document.getElementById('searchAd').style.display = 'none';
+   document.getElementById('busqueda').style.display = 'block';
+  }
+</script>
+
+</head>
+<body>
+
+   
+<div class="container-search"><!-- Inicio del contenedor de busqueda -->
+     <div class="row m-0 w-100">
+           <div class="col-12">
+     <div class="text-center pt.5">
+        <br><br>
+           <h2><strong>ESCOGE LA COMIDA PARA<span class="name"></span>?</strong></h2>
+    </div>
+
+        <div class="box">
+            <div class="container-4">
+            <input type="search" id="search" placeholder="¿CUÁL ALIMENTO COME ''PET NAME''?" />
+            <button class="icon"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container Card de products buscados -->
+       <div class="container-card" id="busqueda">
+        <div class="row m-0 w-100" >
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Nutrisource</h5>
+                <p>Cachorro-Pequeño</p>
+              </div>
+              <div class="card-body">
+               <img src="images/products/p1.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Nutrisource</h5>
+                <p>Cachorro-Grande</p>
+              </div>
+              <div class="card-body">
+                <img src="images/products/p3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- btn ver más -->
+  <a href="#" onClick="mostrarProd();">Ver más</a> 
+
+  <!-- btn Busqueda Avanzada -->
+<div class="avanzada"><a  id="busqA" href="#" onClick="mostrarBusqueda();">Búsqueda avanzada&nbsp;&nbsp;
+  <i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+</div>
+       </div>
+    <!-- Fin del container card de los prductos buscados -->
+
+    <!-- contenedor busqueda avanzada -->
+ <div class="container-busAvan">
+  <div class="row m-0 w-100" id="searchAd">
+      <div class="col-12">
+        <div class="BusqAvanzada"><!-- Comienzo de la clase busqueda avanzada ---->
+          <!-- Comienzo del pequeño furmulario -->
+          <div class="form-group col-md-5">
+            <input type="text" class="w3-input w3-hover-light-grey"
+             placeholder="MARCA">
+          </div>
+          <div class="form-group col-md-5">
+            <input type="text" class="w3-input w3-hover-light-grey" 
+            placeholder="SABOR">
+          </div>
+          <div class="form-group col-md-5">
+            <input type="text" class="w3-input w3-hover-light-grey"  
+           list="etapavida" placeholder="ETAPA DE VIDA">
+           <datalist id="etapavida">
+
+            <option>CACHORRO</option>
+            <option>ADULTOS</option>
+            <option>ADULTOS +7 AÑOS</option>
+            <option>SENIOR</option>
+   
+          </datalist>
+        </div><!-- Fin del pequeño furmulario -->
+    </div><!-- Fin de la clase busqueda avanzada ---->
+
+    <!-- Btn ver menos -->
+<a href="#" onClick="ocultarBusquedaAvanzada();">Menos&nbsp;&nbsp;<i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+<br><br><br>
+      </div>
+  </div>
+</div>
+<!-- Fin del contendor busqueda avanzada -->
+
+   
+
+<div class="container-products"><!-- Comienzo del contenedro de productos  -->
+  <div class="row m-0 w-100" id="products"><!-- Comienzo de esta fila   -->
+  <div class="card-deck">
+
+    <div class="card"><!-- Productos de la primera fila -->
+      <div class="card-header">
+        <h5>Nutrisource</h5>
+        <p>Cachorro-Grande</p>
+      </div>
+      <div class="card-body">
+        <img src="images/products/p3.png" alt="p3">
+      </div>
+    </div>
+      
+    <div class="card">
+      <div class="card-header">
+        <h5>Nutrisource</h5>
+        <p>Cachorro-Grande</p>
+      </div>
+      <div class="card-body">
+        <img src="images/products/p5.png" alt="p5">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h5>Nutrisource</h5>
+        <p>Paquete-Treat con pollo</p>
+      </div>
+      <div class="card-body">
+        <img src="images/products/p2.png" alt="p2">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h5>Nutrisource</h5>
+        <p>Cachorro-Grande</p>
+      </div>
+      <div class="card-body">
+        <img src="images/products/p6.png" alt="p6">
+      </div>
+    </div>
+
+    </div><!-- Fin de Productos de la primera fila -->
+ 
+    <div class="row m-0 w-100"><!-- Comienzo de esta fila -->
+      <div class="card-deck"><!-- Productos de la 2da fila -->
+        <div class="card">
+          <div class="card-header">
+            <h5>Nutrisource</h5>
+            <p>Cachorro-Grande</p>
+          </div>
+          <div class="card-body">
+            <img src="images/products/p7.png" alt="p7">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5>Nutrisource</h5>
+            <p>Cachorro-Grande</p>
+          </div>
+          <div class="card-body">
+            <img src="images/products/p8.png" alt="p8">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5>Nutrisource</h5>
+            <p>Cachorro-Grande</p>
+          </div>
+          <div class="card-body">
+            <img src="images/products/p9.png" alt="p9">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5>Nutrisource</h5>
+            <p>Cachorro-Grande</p>
+          </div>
+          <img src="images/products/pr1.png" alt="pr1">
+          <div class="card-body">
+            <p>Cachorro-Pequeño This is a wider card with supporting text below as</p>
+          </div>
+        </div>
+
+      </div><!-- Fin de los Productos de la 2da fila -->
+    </div><!-- Fin de esta fila -->
+
+  
+    <!-- Sección de la paginación -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item active"><a href="#"><font color="#d85d47">1</font></a></li>
+        <li class="page-item"><a href="#">2</a></li>
+        <li class="page-item"><a href="#">3</a></li>
+        <li class="page-item"><a href="#">4</a></li>
+        <li class="page-item">
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true"><font color="#d85d47">&raquo;</font></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+<!-- Fin de la paginación -->
+
+  </div><!-- Fin de esta fila -->
+
+  </div><!-- Fin del contenedor de productos -->
+
+</div><!-- Fin del contenedor de busqueda -->
+   
+   <!-- incio del boton next  8 -->
+   <div class="container-botonNext">
+    <div class="row m-0 w-100">
+        <div class="col-12">
+            <div class="justify-content-center text-center">
+                <a target="_blank" href="">
+<input type="button" class="btn btn-outline-danger btn-lg" value="Continuar"></input>
+                 </a>
+            </div>
+        </div>
+    </div>
+</div>
+   <!-- Fin del boton next 8 -->
+
+    <!-- Boton de regreso -->
+    <div class="container-botonBack" id="back">
+        <div class="row m-0 w-100">
+            <div class="col-12">
+            <input type="button" class="btn btn-outline-light" value="Atrás" 
+             onclick="history.back()">
+            </div>
+        </div>
+    </div>
+    <!-- Fin del boton back -->
+
+</body>
+</html>

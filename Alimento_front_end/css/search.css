@@ -1,0 +1,218 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Syne&family=Kalam:wght@700&family=Syne:wght@800&family=Gaegu:wght@700&display=swap");
+.container-search {
+  margin-bottom: 80px;
+  /*Da estilo al lo que se encuentra en el container-4 como el input search*/ }
+  .container-search h2 {
+    font-family: "Syne", sans-serif;
+    font-size: 15px;
+    margin-bottom: 50px; }
+  .container-search .container-4 {
+    overflow: hidden;
+    width: 40%;
+    white-space: nowrap;
+    float: right;
+    margin-right: 30%;
+    /*Da estilo al input search*/
+    /*Da el estilo al icono de la lupa en el search*/ }
+    .container-search .container-4 input#search {
+      width: 100%;
+      height: 36px;
+      background: #F7F7F7;
+      font-size: 10pt;
+      float: none;
+      font-family: "Syne", sans-serif;
+      color: #140e0e;
+      text-align: center;
+      text-transform: uppercase;
+      -webkit-border-radius: 9px;
+      -moz-border-radius: 9px;
+      border-radius: 15px;
+      border: #d85d47 1px solid; }
+    .container-search .container-4 button.icon {
+      -webkit-border-top-right-radius: 8px;
+      -webkit-border-bottom-right-radius: 8px;
+      -moz-border-radius-top-right: 8px;
+      -moz-border-radius-bottom-right: 8px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      -webkit-transition: all .55s ease;
+      -moz-transition: all .55s ease;
+      -ms-transition: all .55s ease;
+      -o-transition: all .55s ease;
+      transition: all .55s ease;
+      border: none;
+      background: #F7F7F7;
+      height: 34px;
+      width: 33.5px;
+      color: #d85d47;
+      opacity: 0;
+      margin-top: 18px;
+      font-size: 10pt; }
+  .container-search .container-busAvan {
+    position: relative;
+    left: 35%;
+    margin-top: 4%; }
+    .container-search .container-busAvan #searchAd {
+      display: none; }
+    .container-search .container-busAvan .BusqAvanzada input {
+      width: 70%;
+      text-align: center;
+      font-family: "Syne", sans-serif;
+      color: #140e0e; }
+    .container-search .container-busAvan a {
+      top: 80%;
+      position: absolute;
+      left: 14%;
+      color: #d85d47;
+      font-family: "Syne", sans-serif; }
+
+/*Mantiene activo el, enfoca el icono de la lupa en el search*/
+.container-4:hover button.icon,
+.container-4:active button.icon,
+.container-4:focus button.icon {
+  outline: none;
+  opacity: 1;
+  margin-left: -40px;
+  margin-top: 30px;
+  /* <--- Aquí hace que cuando el curso se dirije hacia el search se traslada hacia el center del navbar*/ }
+
+/* Change the color of links on hover */
+.container-4:hover button.icon:hover {
+  background: #FFE2E2; }
+
+.container-card {
+  position: absolute;
+  left: 31.5%;
+  width: 37%;
+  height: 65%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: #d85d47 1px solid;
+  padding: 10px; }
+  .container-card div.card {
+    left: 10%;
+    top: 15%;
+    width: 88%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+    .container-card div.card .card-header {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #FFE2E2; }
+      .container-card div.card .card-header h5 {
+        font-family: "Syne", sans-serif;
+        color: #d85d47;
+        font-size: large; }
+      .container-card div.card .card-header p {
+        font-family: "Syne", sans-serif;
+        color: #939393; }
+    .container-card div.card .card-body img {
+      position: relative;
+      width: 115px;
+      height: 150px;
+      left: 5%;
+      top: 40%; }
+    .container-card div.card .card-body img:hover {
+      border: 5px solid #FFFFFF; }
+  .container-card a {
+    position: absolute;
+    top: 88%;
+    left: 45.9%;
+    font-family: "Syne", sans-serif;
+    color: #d85d47; }
+  .container-card .avanzada a {
+    font-family: "Syne", sans-serif;
+    color: #d85d47;
+    position: absolute;
+    top: 2%;
+    left: 36%; }
+
+.container-products {
+  margin-top: 5%;
+  position: relative;
+  width: 70%;
+  margin-left: 15%; }
+  .container-products #products, .container-products #busqueda {
+    display: none; }
+  .container-products div.card {
+    left: 1%;
+    top: 10%;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+    .container-products div.card img {
+      position: relative;
+      width: 125px;
+      height: 180px;
+      left: 21%;
+      top: 8%;
+      cursor: pointer; }
+    .container-products div.card img:hover {
+      border: 5px solid #FFFFFF; }
+    .container-products div.card .card-header {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #FFE2E2; }
+      .container-products div.card .card-header h5 {
+        font-family: "Syne", sans-serif;
+        color: #d85d47;
+        font-size: large; }
+      .container-products div.card .card-header p {
+        font-family: "Syne", sans-serif;
+        color: #939393; }
+    .container-products div.card .card-body img {
+      position: relative;
+      width: 125px;
+      height: 180px;
+      left: 14%;
+      top: 5%;
+      cursor: pointer; }
+    .container-products div.card .card-body h5 {
+      color: #FFFFFF; }
+    .container-products div.card .card-body p {
+      color: #FFFFFF; }
+  .container-products .pagination {
+    position: absolute;
+    left: 46%;
+    top: 110%; }
+    .container-products .pagination a {
+      font-family: "Syne", sans-serif;
+      padding: 5px;
+      color: #140e0e;
+      font-size: 20px; }
+
+.container-botonNext input {
+  margin-top: 28%;
+  position: absolute;
+  right: 39.65%;
+  background-color: #FFE2E2;
+  border-radius: 45px;
+  color: #d85d47;
+  padding: 2px;
+  width: 20%;
+  height: 44px;
+  margin-bottom: 25px; }
+.container-botonNext input:hover {
+  background: #d85d47;
+  color: #FFFFFF; }
+
+.container-botonBack input {
+  margin-top: 33%;
+  position: absolute;
+  right: 46.55%;
+  background-color: #FFE2E2;
+  border-radius: 45px;
+  color: #707070;
+  padding: 2px;
+  width: 6%;
+  height: 30px;
+  margin-bottom: 60px;
+  font-family: "Syne", sans-serif;
+  font-size: 14px; }
+
+#back input:hover {
+  background: #d85d47;
+  color: #FFFFFF; }
+
+/*# sourceMappingURL=search.css.map */

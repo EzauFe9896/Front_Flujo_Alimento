@@ -1,0 +1,784 @@
+@import 'variables';//Se importan los colores
+@import 'fuentesletters';//Se importan las fuentes de las letras
+@import 'email';//importa el extilo del paso de registro del email
+
+
+//  Estilos de la barra de progreso
+
+@mixin  estilo {
+    float: left;
+    position: absolute;
+    top: 50px;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 50px;
+    width: 50px;
+    height: 48px;
+}
+
+
+.step-progress{
+
+    width: 75%;
+    height: 100px;
+    position: relative;
+    padding-right: 50px;
+    margin-right: 100%;
+    margin-bottom: 55px;
+    
+    .img1{
+        left: 0%;
+        background-color:$color1; 
+
+        @include estilo;
+    }
+
+    .img2{
+        left: 35%;
+        background-color: #DDE1E3;
+
+        @include estilo;
+    }
+
+    .img3{
+        left: 65%;
+        background-color: #DDE1E3;
+
+        @include estilo;
+    }
+
+    .img4{
+        left: 100%;
+        background-color: #DDE1E3;
+        @include estilo;
+    }
+
+    .progress{
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        top: 80%;
+        left: 27px;
+        transform: translate(0, -100%);
+        z-index: -1;
+        
+    }
+}
+
+
+
+//  Fin de los estilos de la barra de progreso
+
+//   Estilos que alinean el texto de la imagenes de la progress bar
+.text-align{
+    position: absolute;
+    top: 104px;
+    right: 92%;
+    font-size: 15px;
+    p{
+    font-family: $font2;
+    color: #d85d47; 
+    }
+}
+
+.text-align1 {
+     position: absolute;
+     top: 104px;
+     left: 30%;
+     font-size: 15px;
+     p{
+        font-family: $font2;
+        color: $color2;
+    }
+  }
+
+  .text-align2 {
+    position: absolute;
+    top: 104px;
+    right: 28%;
+    font-size: 15px;
+    p{
+        font-family: $font2;
+        color: $color2;
+    }
+ }
+
+ .text-align3 {
+    position: absolute;
+    top: 104px;
+    left: 99%;
+    font-size: 15px;
+    p{
+        font-family: $font2;
+        color: $color2;
+    }
+ }
+//  Fin de los estilo del texto de las imagenes
+
+//   Estilo de la imagen Alimento.cr
+#alimento .col-2 {
+    margin-top: 4.5%;
+    padding-left: 40px;
+
+    img{
+        width: 70%;
+        height: auto;
+        min-width: 65px;
+    }
+    
+}
+//  Fin del estilo de la imagen
+
+//    Estilos del titulo, párrafo y input
+@mixin inputStyle{
+	box-sizing: border;
+	padding: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.container-titulo{
+
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    h2{
+        font-family: $font3;
+        font-size: 15px;
+    }
+    p{
+        font-family: $font3;
+        color: $color3;
+    }
+
+input {
+@include inputStyle;
+width: 15%;
+}
+}
+//   Fin de los estilos de esta sección
+
+//  Estilo  del botón continuar1
+@mixin styleboton{
+    position: absolute;
+    right: 39.65%;
+    background-color: $color5;
+    border-radius: 45px;
+    color: $color1;
+    padding: 2px; 
+    width: 20%;
+    height: 44px;
+    }
+.container-botonNext1 {
+    
+    button{
+    @include styleboton;
+}
+  button:hover{
+      background: $color1;
+      color: $color4;
+  }
+}
+//   Fin del esstilo del botón continuar1
+
+//  Inicio de los Estilos del step2
+//Estilos del contendor genero
+.container-genero{
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    h2{
+        font-family: $font3;
+        text-align: center;
+        font-size: 15px;
+    }
+    p{
+        font-family: $font3;
+    }
+}
+
+.frow {
+      clear:both;
+      padding:0.5rem;
+      margin-left: 320px;
+
+      .col {
+        display: block;
+        float:left;
+        margin: 1% 0 1% 1.6%;
+        padding:3%;
+
+        .col:first-child { margin-left: 0; }
+          }
+          .col-md-4 {
+            width: 50%; 
+          }
+}
+
+
+
+
+#genero input[type=radio] {
+    display: none;
+  }
+
+  @mixin labelstyle{
+    display: inline-block;
+    margin: 4px;
+    padding: 8px;
+    background: $color4;
+    color: $color1;
+    width: 100%;
+    min-width: 100px;
+    cursor: pointer;
+    border-radius: 25px;
+    border:$color1 0.5px solid;
+    text-align: center;
+  }
+  #genero label {
+   @include labelstyle;
+  }
+
+  #genero label:hover {
+    background: $color5;
+  }
+
+  #genero input[type=radio]:checked + label {
+    background: $color1;
+    color: $color4;
+  }
+// Fin de los de este contenedor
+  
+//Estilos del contenedo castrado
+  .container-castrado{
+
+    margin-bottom: 165px;
+      
+    h2{
+        font-family: $font3;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+#castrado input[type=radio] {
+    display: none;
+  }
+
+  #castrado label {
+    @include labelstyle;
+  }
+
+  #castrado label:hover {
+    background: $color5;
+  }
+  #castrado input[type=radio]:checked + label {
+    background: $color1;
+    color: $color4;
+  }
+//Fin de los estilos de este  contendor
+  
+//  Estilo  del botón continuar2
+.container-botonNext2 {
+    
+    input{
+    @include styleboton;
+    font-family: $font3;
+    font-size: 15px;  
+}
+ input:hover{
+      background: $color1;
+      color: $color4;
+  }
+
+}
+//   Fin del esstilo del botón continuar2
+
+//  Estilo  del botón regresar
+@mixin botonback{
+    position: absolute;
+    right: 46.55%;
+    background-color: $color5;
+    border-radius: 45px;
+    color: $color2;
+    padding: 2px; 
+    width: 6%;
+    height: 30px;
+    margin-bottom: 60px;
+    font-family: $font3;
+    font-size: 14px;
+}
+.container-botonBack {
+    
+    input{
+  @include botonback;
+}
+
+}
+#back input:hover{
+    background: $color1;
+    color: $color4;
+}
+//   Fin del esstilo del botón regresar
+
+//Inicio de los estilo del step 3
+.container-raza{
+
+    input{
+   @include inputStyle;
+   width: 25%;
+   margin-bottom: 40px;
+    }
+
+    p{
+        font-family: $font3;
+        margin-bottom: 35px;
+        color:$color3;
+
+        a{
+            color:$color1;
+        }
+    }
+}
+ 
+.container-botonNext3 {
+    
+    input{
+    @include styleboton; 
+}
+input:hover{
+    background: $color1;
+    color: $color4;
+}
+}
+.container-botonBack {
+    
+    input{
+  @include botonback;
+}
+
+}
+
+.container-razaSecun{
+    
+    #razaSecun{
+        display: none;
+      }
+
+    input{
+    @include inputStyle;
+    width: 25%;
+    margin-bottom: 60px;
+    margin-left: 37.5%;
+    }
+    
+    a{
+        text-align: center;
+        position: relative;
+        left: 44%;
+        color: $color1;
+        font-family: $font3;
+    }
+}
+//Fin de lo estilos del step 3
+
+//Estilos del step 4
+.container-fecha{
+
+    input{
+        @include inputStyle; 
+        width: 25%;
+        margin-left: 37.5%;
+    }
+
+    p{
+        font-family: $font3;
+        margin-bottom: 60px;
+        color: $color3;
+    }
+}
+// Fin de los estilos del step 4
+
+//  Estilos del step 5
+.container-titulo2{
+
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    h2{
+        font-family: $font3;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    p{
+        font-family: $font3;
+        margin-bottom: 60px;
+        color: $color3; 
+    }
+
+input {
+@include inputStyle;
+width: 18%;
+margin-left: 41.55%;
+}
+}
+//   Fin de los estilos del step 5
+
+// Estilos del paso 6
+.container-actividad{
+
+    h2{
+        font-family: $font3;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+  p{
+      font-size: 13px;
+      font-family: $font3;
+      text-align: center;
+      color: $color3;
+      margin-bottom: 80px;
+  }
+
+        .imagen-pet img{
+          margin-left: 515px;
+          width: 120px;
+          height: 120px;
+          margin-bottom: 20px;
+        }
+
+    // Estilos del texto
+        @mixin textestilo{
+            position: absolute;
+            top: 99%;
+            transform: translate(-50%, -50%);
+            font-family: $font3;
+            color: $color1;
+            font-size: 12px;
+        }
+        .texto-abajo1{
+            @include textestilo;
+            left: 50%;
+                }
+
+        .texto-abajo2{
+        @include textestilo;
+        left: 17.5%;
+                  
+                 }
+        .texto-abajo3{
+            @include textestilo;
+            left: 82%;
+               }
+        // Fin de los estilos del texto
+}
+
+/* Style for select activity and waistline pet */
+.lineSelect{
+    width: 100%;
+}
+.lineSelect  td {
+    text-align: center;
+}
+.lineSelect .line td {
+    position: relative; 
+}
+
+// Aqui se le da el estilo y forma al btn radio input
+.lineSelect .line input {
+   
+    box-sizing: border-box;
+    appearance: none;
+    border: none;
+    background: $color11;
+    width: 3px;
+    height: 10px;
+    cursor: pointer;
+
+}
+.lineSelect .line td:after {
+    content: '';
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(0, -100%);
+    z-index: -1;
+    
+}
+
+.lineSelect .line td:last-child:after {
+    display: none;
+}
+.lineSelect .line + .labels td{
+    width: 100px;
+}
+
+.labels
+{
+    font-family: $font3;
+}
+.lineSelect .line input[type=radio]:checked+label { 
+    color:$color1;
+    }
+
+.lineSelect .line input[type=radio]:checked{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.lineSelect .line input[type=radio] + img {
+    cursor: pointer;
+}
+.lineSelect .line input[type=radio]:not(:checked) + img{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+//  Fin de los estilos del paso 6 
+
+// Estilos del paso 7
+.container-peso{
+
+    h2{
+        margin-top:50px;
+        font-family: $font3;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+  p{
+      margin-top: 50px;
+      font-size: 13px;
+      font-family: $font3;
+      text-align: center;
+      color: $color2;
+      margin-bottom: 80px;
+  }
+
+        .imagen-pet img{
+          margin-left: 500px;
+          margin-bottom: 35px;
+          width: 120px;
+          height: 120px; 
+        }
+        // estilo a la imagen de muy delgado
+        .imagen-pet1 img{
+            margin-left: 520px;
+            margin-bottom: 35px;
+            width: 86px;
+            height: 175px;
+          }
+        // Estilos del  texto
+@mixin textdown{
+    position: absolute;
+    top: 105%;
+    transform: translate(-50%, -50%);
+    font-family: $font3;
+    color: $color1;
+    text-align: center;
+    font-size: 12px;
+}
+.texto-down1{
+        
+        left: 11%;
+        @include textdown;
+        
+    }
+    .texto-down2{
+    
+        left: 30.5%;
+        @include textdown;
+        
+    }
+    .texto-down3{
+        
+        left: 50%;
+        @include textdown;
+      
+    }
+    .texto-down4{
+        
+        left: 69.5%;
+        @include textdown;
+        
+    }
+    .texto-down5{
+       
+        left: 89%;
+        @include textdown;
+    
+    }
+    // Fin de los estilos del texto
+}
+// Fin de de los estilos del paso 7
+
+// Estilos del paso 9
+.container-prod{
+
+ @mixin textCool {
+    font-family: $font3;
+    color: $color3;
+ }
+    // Da estilo al titulo principal
+    h1{
+    margin-top: 100px;
+    font-family: $font3;
+    font-size: 15px;
+    }
+    // y este da estilo al parrafo debajo del titulo principal
+    p{
+        @include textCool;
+        margin-bottom: 25px;
+    }
+//posicionamiento de las imagenes de los productos
+// alto y ancho
+   img{
+       margin-left: 5%;
+       width: 210px;
+       height: 275px;
+   }
+
+//Posicionamiento y estilo del texto en el card
+// Coloca al card y lo que esta dentro de el hacia el centro
+// alejandolo de la izq.
+div.card{
+    
+    width: 50%;
+    left: 25%;
+}
+   .derecha{
+   margin-left: 45%;
+   position: absolute;
+    top: 7%;
+    // Da estilo al subtitulo del producto 
+   h2{
+       font-family: $font3;
+       color: $color1;
+       font-size: 16px;
+   }
+// y este al parrafo que se encunetra debajo de ese subtitulo
+   p{
+    @include textCool;
+   }
+}
+// Este da estilo al precio del producto y al parrafo debajo del precio
+.texto1{
+    margin-left: 45%;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    background-color: $color9;
+    padding: 15px 40px 1px;
+    h3{
+        font-family: $font3;
+        color: $color1;
+        font-size: 18px;
+    }
+    .p{
+        font-family: $font3;
+        color: $color3;
+    }
+}
+// Este da estilo al parrafo que se encuntra mas abajo del precio
+.texto2{
+    margin-left: 53.7%;
+    position: absolute;
+    top: 75%;
+    text-align: center;
+    p{
+        @include textCool;
+    }
+    // da estio al botón que lleva a la ventana emergente
+    a{
+        color: $color1;
+    }
+}
+// ------------Fin del posicionamiento y estilo del texto en el card-----
+
+// Inicio del estilo de la ventana emergente
+.modal-parrafo{
+    padding-top: 30px;
+    p{
+        @include textCool;
+        text-align: center;
+    }
+//posición del boton cerrar en forma de "X" 
+// con un margen alejado de la derecha
+    button{
+        margin-right: 5%;
+    }
+}
+// Estilo del body de la ventana emergente
+.modal-body{
+      // Centra todo el contenido que se encuentra en el body
+    justify-content: center;
+    // da estilo al input que est dentro del modal
+    input{
+        @include inputStyle; 
+        width: 45%;
+        margin-left: 28%; 
+    }
+    p{
+        @include textCool;
+        text-align: center;
+    }
+    // Estilo del botón guardar
+    button{
+      border-radius: 45px;
+      width: 45%;
+      margin-left: 27%;
+      background-color: $color5;
+      color: $color1;
+      margin-bottom: 15px;
+    }
+    button:hover{
+        background: $color1;
+        color: $color4;
+    }
+}
+// Fin de los estilos del modal-body
+
+// Estilos del modal foter
+.modal-footer{
+    // Centra todo el contenido que se encuentra en el footer
+   justify-content: center;
+// estilos del botón cancelar
+   button{
+    background-color: $color5;
+    border-radius: 45px;
+    color: $color2;
+    font-family: $font3;
+    margin-bottom: 25px;
+   }
+   button:hover{
+    background: $color1;
+    color: $color4;
+}
+}
+// Fin de los estilos del modal-footer
+/* Responsive columns */
+@media all and (max-width: 600px) {
+    .col-md-12 {
+        width:100%;
+        height:auto;
+        margin-left:10px;
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+    h1, h2, h3, p {
+        margin:0px;
+        padding:0px;
+        padding-left:5%;
+        display:block;
+        float:none;
+        text-align:left;
+    }
+}
+}
+// Fin de los estilos del step 9
