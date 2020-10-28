@@ -295,6 +295,9 @@
   background: #d85d47;
   color: #FFFFFF; }
 
+.container-raza #add {
+  display: none; }
+
 .container-raza input {
   box-sizing: border;
   padding: 0.5em;
