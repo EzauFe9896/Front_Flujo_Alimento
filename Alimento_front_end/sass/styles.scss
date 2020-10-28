@@ -325,6 +325,10 @@ width: 15%;
 //Inicio de los estilo del step 3
 .container-raza{
 
+	 #add{
+        display: none;
+      }
+	
     input{
    @include inputStyle;
    width: 25%;
