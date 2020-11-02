@@ -19,37 +19,6 @@
 <link href="css/search.css" rel="stylesheet"> 
 <!-- --------------------------- -->
 
-
-<script>
-  //Esta función llama al nombre de la mascota cuando se registra en el primer paso.
-  function setName(){
-      var petName = document.getElementById('pet_name').value;
-      var divName = document.getElementsByClassName('name');
-      for (i = 0; i < divName.length; i++) {
-          divName[i].innerHTML = petName.toUpperCase();
-      }
-  }
-
-// Esta fución llama a los productos
-  function mostrarProd(){
-   document.getElementById('products').style.display = 'block';
-   document.getElementById('busqueda').style.display = 'none';
-   document.getElementById('busqA').style.display = 'block';
-  }
-
-  // Esta fución llama a busqueda avanzada
-  function mostrarBusqueda(){
-   document.getElementById('searchAd').style.display = 'block';
-   document.getElementById('busqueda').style.display = 'none';
-  }
-
-    // Esta fución oculta la busqueda avanzada
-    function ocultarBusquedaAvanzada(){
-   document.getElementById('searchAd').style.display = 'none';
-   document.getElementById('busqueda').style.display = 'block';
-  }
-</script>
-
 </head>
 <body>
 
@@ -289,6 +258,15 @@
         </div>
     </div>
     <!-- Fin del boton back -->
+    
+      <!-- Esta funcion trae el nombre de la mascota cuando se registra en el primer paso -->
+     <script src="js/setNamePet.js"></script>
+
+     <!-- Esta fución llama a los productos -->
+     <script src="js/showProducts.js"></script>
+
+     <!-- Esta fución llama a busqueda avanzada -->
+     <script src="js/showBusqueda.js"></script>
 
 </body>
 </html>
