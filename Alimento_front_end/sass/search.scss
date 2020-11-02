@@ -291,13 +291,14 @@ h2{
     position: absolute;
     left: 46%;
     top: 110%;
-
+ 
     a{
      font-family: $font3;
      padding: 5px;
      color: $color7;
      font-size: 20px;
     }
+  
   }
   }// Fin de estos estilos de container products
 
@@ -312,6 +313,7 @@ h2{
   color: $color1;
   padding: 2px; 
   width: 20%;
+  font-family: $font3;
   height: 44px;
   }
     
