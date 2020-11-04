@@ -36,21 +36,21 @@
 
     .img2{
         left: 35%;
-        background-color: #DDE1E3;
+        background-color: $color13;
 
         @include estilo;
     }
 
     .img3{
         left: 65%;
-        background-color: #DDE1E3;
+        background-color: $color13;
 
         @include estilo;
     }
 
     .img4{
         left: 100%;
-        background-color: #DDE1E3;
+        background-color: $color13;
         @include estilo;
     }
 
@@ -169,6 +169,7 @@ width: 15%;
     padding: 2px; 
     width: 20%;
     height: 44px;
+    font-family: $font3;
     }
 .container-botonNext1 {
     
@@ -283,9 +284,7 @@ width: 15%;
 .container-botonNext2 {
     
     input{
-    @include styleboton;
-    font-family: $font3;
-    font-size: 15px;  
+    @include styleboton;  
 }
  input:hover{
       background: $color1;
@@ -325,10 +324,10 @@ width: 15%;
 //Inicio de los estilo del step 3
 .container-raza{
 
-	 #add{
+    #add{
         display: none;
       }
-	
+      
     input{
    @include inputStyle;
    width: 25%;
@@ -366,7 +365,7 @@ input:hover{
 
 .container-razaSecun{
     
-    #razaSecun{
+    #razaSecun, #add{
         display: none;
       }
 
@@ -544,7 +543,7 @@ margin-left: 41.55%;
     width: 0;
 }
 //  Fin de los estilos del paso 6 
-
+  
 // Estilos del paso 7
 .container-peso{
 

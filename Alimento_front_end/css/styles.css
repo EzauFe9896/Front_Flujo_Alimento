@@ -181,7 +181,8 @@
   color: #d85d47;
   padding: 2px;
   width: 20%;
-  height: 44px; }
+  height: 44px;
+  font-family: "Syne", sans-serif; }
 .container-botonNext1 button:hover {
   background: #d85d47;
   color: #FFFFFF; }
@@ -272,8 +273,7 @@
   padding: 2px;
   width: 20%;
   height: 44px;
-  font-family: "Syne", sans-serif;
-  font-size: 15px; }
+  font-family: "Syne", sans-serif; }
 .container-botonNext2 input:hover {
   background: #d85d47;
   color: #FFFFFF; }
@@ -297,7 +297,6 @@
 
 .container-raza #add {
   display: none; }
-
 .container-raza input {
   box-sizing: border;
   padding: 0.5em;
@@ -321,7 +320,8 @@
   color: #d85d47;
   padding: 2px;
   width: 20%;
-  height: 44px; }
+  height: 44px;
+  font-family: "Syne", sans-serif; }
 .container-botonNext3 input:hover {
   background: #d85d47;
   color: #FFFFFF; }
@@ -339,7 +339,7 @@
   font-family: "Syne", sans-serif;
   font-size: 14px; }
 
-.container-razaSecun #razaSecun {
+.container-razaSecun #razaSecun, .container-razaSecun #add {
   display: none; }
 .container-razaSecun input {
   box-sizing: border;

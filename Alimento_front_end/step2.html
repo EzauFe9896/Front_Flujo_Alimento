@@ -23,18 +23,11 @@ crossorigin="anonymous"></script>
 <link href="css/styles.css" rel="stylesheet"> 
 <!-- --------------------------- -->
 
+<!-- Esta función hace avanzar la barra de progreso -->
+<Script type="text/javascript" src="js/progress_bar.js"></script>
 
-<script>
-// Esta funcion trae el nombre de la mascota cuando se registra en el primer paso
-    function setName(){
-        var petName = document.getElementById('pet_name').value;
-        var divName = document.getElementsByClassName('name');
-        for (i = 0; i < divName.length; i++) {
-            divName[i].innerHTML = petName.toUpperCase();
-        }
-    }
-// ----------------Fin de la función--------------
-</script>
+<!-- Esta funcion trae el nombre de la mascota cuando se registra en el primer paso -->
+<script src="js/setNamePet.js"></script>
 </head>
 
 <body>
@@ -123,7 +116,7 @@ crossorigin="anonymous"></script>
     <div class="row m-0 w-100">
         <div class="col-12">
             <div class="justify-content-center text-center">
-                <a target="_blank" href="">
+                <a target="_blank" href="step3.html">
 <input type="button" class="btn btn-outline-danger btn-lg" value="Continuar"></input>
                  </a>
             </div>

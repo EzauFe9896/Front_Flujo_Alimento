@@ -23,20 +23,6 @@ crossorigin="anonymous"></script>
 <link href="css/styles.css" rel="stylesheet"> 
 <!-- --------------------------- -->
 
-<script>
-      var progreso = 0;
-      var idInterval = setInterval(function(){
-        // Aumento en 10 el progreso
-        progreso +=10;
-        $('#progress-bar').css('width', progreso + '%');
-      
-      //Si llegó a 100 elimino el interval
-        if(progreso == 100){
-       clearInterval(idInterval);
-      }
-      },1000);
-</script>
-
 </head>
 
 
@@ -126,13 +112,16 @@ aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         <div class="col-12">
             <div class="justify-content-center text-center">
                 <a target="_blank" href="file:///C:/Users/Ezauj/OneDrive/Desktop/Alimento_front_end/step2.html">
-            <button type="button" class="btn btn-outline-danger btn-lg">
-               <font face="'Syne', sans-serif" size="3">Continuar</font></button>
+    <button type="button" class="btn btn-outline-danger btn-lg">Continuar</button>
                  </a>
             </div>
         </div>
     </div>
 </div>
    <!-- Fin del boton next 1 -->
+
+   <!-- Esta función hace avanzar la barra de progreso -->
+<script type="text/javascript" src="js/progress_bar.js"></script>
+
 </body>
 </html>

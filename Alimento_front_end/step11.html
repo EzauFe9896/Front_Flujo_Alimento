@@ -22,48 +22,6 @@ crossorigin="anonymous">
 <!-- --------------------------- -->
 
 <script>
-    // Esta funcion trae el nombre de la mascota cuando se registra en el primer paso
-        function setName(){
-            var petName = document.getElementById('pet_name').value;
-            var divName = document.getElementsByClassName('name');
-            for (i = 0; i < divName.length; i++) {
-                divName[i].innerHTML = petName.toUpperCase();
-            }
-        }
-    // ----------------Fin de la función--------------
-
-
-// Esta función valida la contreseña
-function validarPasswd(){
-pass1 = document.getElementById('pass1');
-pass2 = document.getElementById('pass2');
-
- // Verificamos si las constraseñas no coinciden 
- if (pass1.value != pass2.value) {
- 
- // Si las constraseñas no coinciden mostramos un mensaje 
- document.getElementById("error").classList.add("mostrar");
-
- return false;
-} else {
-
- // Si las contraseñas coinciden ocultamos el mensaje de error
- document.getElementById("error").classList.remove("mostrar");
-
- // Mostramos un mensaje mencionando que las Contraseñas coinciden 
- document.getElementById("ok").classList.remove("ocultar");
-
- // Desabilitamos el botón de login 
- document.getElementById("pagar").disabled = true;
-
- // Refrescamos la página (Simulación de envío del formulario) 
- setTimeout(function() {
-     location.reload();
- }, 3000);
-
- return true;
-}
-
 // var espacios = false;
 // var cont = 0;
 
@@ -88,43 +46,8 @@ pass2 = document.getElementById('pass2');
 //   alert("Todo esta correcto");
 //   return true; 
 // }
+</script>
 
-}
-//  Fin de la función validar contraseña
-
-
-// Función que valida el campo de la targeta
-function onkeyPress(event){
-
-    var creditcard = document.getElementById('creditcard');
- 
- var send        = document.getElementById('send');
- 
-send.addEventListener('click', function(e){
-    e.preventDefault();
-    alert('Tarjate de credito es: '+creditcard.value.replace(/ /g, '') );
-});
- 
-    creditcard.value = creditcard.value.replace(/[a-zA-Z]/g, '');
- 
-    //validamos si es american express para esto quitamos todos los espacios en blaco y luego veriricamos que tenga 4, 6 y 5 digitos.
-    if(creditcard.value.replace(/ /g, '').match(/\b(\d{4})(\d{6})(\d{5})\b/))
-        creditcard.value = creditcard.value
-            .replace(/\W/gi, '')//quitamos todos los espacios demas
-            .replace(/\b(\d{4})(\d{6})(\d{5})\b/, '$1 $2 $3') //si cumple el formato añadimos 3,6 y 5 digitos
-            .trim();
-    else //si no es american express entonces es una tarjeta visa o master card
-        creditcard.value = creditcard.value
-            .replace(/\W/gi, '')
-            .replace(/(.{4})/g, '$1 ')
-            .trim()
-}
- 
-creditcard.addEventListener('keypress',onkeyPress);
-creditcard.addEventListener('keydown',onkeyPress);
-creditcard.addEventListener('keyup',onkeyPress);
-// Fin de la función validar targeta
-    </script>
 </head>
 
 <body>
@@ -362,6 +285,15 @@ creditcard.addEventListener('keyup',onkeyPress);
 
 </div><!-- Fin del contenedor -->
         
+<!-- Esta funcion trae el nombre de la mascota cuando se registra en el primer paso -->
+<script src="js/setNamePet.js"></script>
+
+<!-- Esta función valida la contreseña -->
+<script src="js/validarPassword.js"></script>
+
+<!-- Función que valida el campo de la targeta -->
+<script src="js/validaCampoCreditCard.js"></script>
+
 
 </body>
 </html>
